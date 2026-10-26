@@ -1,0 +1,37 @@
+{
+  "repository": "black-forest-labs/flux-3-image-klein-comfy",
+  "revision": "feef60b0aaf63a4773ace96636ebbcf43b881312",
+  "license": "FLUX.3 [klein] Community License",
+  "variant": "distilled",
+  "generation_steps": 16,
+  "total_download_bytes": 27033425992,
+  "precision_policy": {
+    "image_model": "BF16",
+    "image_text_encoder": "BF16",
+    "prompt_upsampler": "W4A8 official auxiliary model",
+    "reason": "Keep the image path full BF16 while fitting the official prompt upsampler reliably on a 32 GB GPU and 64 GB host."
+  },
+  "files": [
+    {
+      "path": "diffusion_models/flux3-image-klein-bf16.safetensors",
+      "size": 11097404512,
+      "sha256": "c3e9813cdd049c831c836b2e9db61150e49a93fc1a4c63b256494642fee0bd7c"
+    },
+    {
+      "path": "text_encoders/qwen3vl_4b_bf16.safetensors",
+      "size": 8875719408,
+      "sha256": "f0b24fc5c8d7c0ea6ca909da14c20af5cac53f22506be942c6c956f838b9630f"
+    },
+    {
+      "path": "text_encoders/qwen3.5_9b_flux3_prompt_upsampler_w4a8.safetensors",
+      "size": 6724090780,
+      "sha256": "e5d85a7421d197bf5a12474511936ecabce19a833252f16e9310a983194a4458"
+    },
+    {
+      "path": "vae/flux2-vae.safetensors",
+      "size": 336211292,
+      "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3"
+    }
+  ]
+}
+
