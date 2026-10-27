@@ -26,13 +26,14 @@
 - 採樣固定16 steps、CFG 1、Euler、Simple。
 - 正式尺寸沿用直圖832×1088、橫圖1088×832。
 - 官方Prompt Upsampler固定開啟；系統提示詞保存在`prompt-upsampler-system.txt`。
+- r2修正ComfyUI V3 `DynamicCombo`的API格式：`sampling_mode`子欄位使用點號鍵，避免暖機時缺少必要參數。
 - 暖機工作流走完整模型鏈，但只跑4 steps；正式工作流仍是16 steps。
 
 ## 建置與部署順序
 
 1. 將本資料夾放到新的GitHub Repository根目錄。
 2. GitHub Actions建置並推送：
-   `ghcr.io/<GitHub帳號>/salad-flux3-klein-bf16:comfy0.42.1-flux3-klein-distilled-bf16-r1`
+   `ghcr.io/<GitHub帳號>/salad-flux3-klein-bf16:comfy0.42.1-flux3-klein-distilled-bf16-r2`
 3. 將GHCR Package設為Public。
 4. 在Hugging Face接受模型授權並建立只讀Token。
 5. Token只保存於本機記憶根目錄`huggingAPIKEY.txt`，由控制腳本在建立Salad Container Group時傳入`HF_TOKEN`；該檔案已被記憶根目錄的`.gitignore`忽略。

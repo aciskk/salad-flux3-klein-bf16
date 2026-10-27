@@ -3,4 +3,4 @@ huggingfaceToken.txt
 *.sha256-ok
 runtime/
 outputs/
-
+__pycache__/
